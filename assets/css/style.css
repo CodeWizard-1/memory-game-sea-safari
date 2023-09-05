@@ -18,6 +18,10 @@ body {
     background: url('../images/background-dark-scuba-divers.webp') no-repeat center	center/cover;
 }
 
+.hidden-heading {
+    display: none;
+}
+
 .header {
     margin: 10px auto;
     z-index: 99;
@@ -36,6 +40,10 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 200%;
+}
+
+.red {
+    color: rgb(225, 0, 101);
 }
 
 .block-game {
@@ -73,4 +81,30 @@ body {
     background: linear-gradient(to right, #f2fcfe, #1c92d2);
     backface-visibility: hidden;
     box-shadow: 5px	5px 3px rgb(8, 16, 115);
+}
+
+.cards.flip {
+    transform: rotateY('180deg');
+}
+
+.front-face-card {
+    transform: rotateY('180deg');
+}
+
+#restart-btn {
+    display: flex;
+    background-color: #7b38d8;
+    border-radius: 10px;
+    color: #eeeeee;
+    justify-content: center;
+    font-size: 28px;
+    width: 	200px;
+    transition: all .5s;
+    cursor: pointer;
+    margin: 10px auto;
+    box-shadow: 5px 5px 3px rgb(8, 16, 115);
+}
+
+#restart-btn:hover {
+    background-color: green;
 }
