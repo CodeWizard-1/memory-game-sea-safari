@@ -91,12 +91,34 @@
                 <img src="./assets/images/whale.svg" alt="" class="front-face-card">
                 <img src="./assets/images/Blue-ship-anchor.svg" alt="" class="back-face-card">
             </div>
-
         </section>
         <!-- Start and end windows -->
         <section>
-
-
+            <div id="start-window" class="start-window">
+                <div class="start-window-content">
+                    <h2>Enter your name</h2>
+                    <input type="text" id="play-name" placeholder="Player name">
+                    <br>
+                    <button id="start-button">START</button>
+                </div>
+            </div>
+            <div id="results" class="final-window">
+                <div class="final-window-content">
+                    <h2>Game Results</h2>
+                    <table>
+                        <thead>
+                            <th>
+                                <tr>
+                                    <th>Rank<span id="rating-text"></th>
+                                    <th>Name<span id="results-player-name"></span></th>
+                                    <tr>Time<span id="results-time"></span></tr>
+                            </th>
+                        </thead>
+                        <tbody id="best-results-table"></tbody>
+                    </table>
+                </div>
+            </div>
+            <button id="restart-btn">NEW GAME</button>
         </section>
     </main>	
 </body>
