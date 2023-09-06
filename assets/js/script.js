@@ -39,10 +39,22 @@ playerName.addEventListener("input", playerNameCheck);
 
 window.onload = openStartWindow;
 
+// startBtn.addEventListener("click", () => {
+//     if (playerName.value.trim() !=="") {
+//         closeStartWindow();
+//         mixCards();
+//     }
+// });
+
 startBtn.addEventListener("click", () => {
-    if (playerName.value.trim() !=="") {
+    const playerName = document.getElementById("player-name");
+
+    if (playerName.value.trim() !== "") {
         closeStartWindow();
         mixCards();
+    } else {
+        const nameError = document.getElementById("name-error");
+        nameError.style.display = "block"; // Показываем сообщение об ошибке
     }
 });
 
@@ -132,6 +144,7 @@ function showGameTime() {
     resultsShow();
 };
 
+
 function updateRating(showPlayerName, time) {
     const result = {
         showPlayerName,
@@ -206,9 +219,9 @@ function resetGame() {
     stopTimer();
     resetTimer();
     closeResults();
-    resetTimer();
+    // resetTimer();
     resetCards();
-    mixCards();
+    // mixCards();
     openStartWindow();
 
     localStorage.removeItem("memoryGameResults");
@@ -240,3 +253,5 @@ function hideResultsModal() {
     const resultsWindow = document.getElementById("results");
     resultsWindow.style.display = "none";
 };
+
+//test
