@@ -15,19 +15,19 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Cherry Bomb One', cursive;
-    background: url('../images/background-dark-scuba-divers.webp') no-repeat center	center/cover;
+    background: url('../images/background-dark-scuba-divers.webp') no-repeat center center/cover;
 }
 
 .hidden-heading {
     display: none;
 }
 
-.header {
+header {
     margin: 10px auto;
     z-index: 99;
 }
 
-.header h1 {
+header h1 {
     font-size: 300%;
     text-align: center;
     color: rgb(255, 20, 75);
@@ -71,7 +71,8 @@ body {
     cursor: pointer;
 }
 
-.front-face-card, .back-face-card {
+.front-face-card,
+.back-face-card {
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -81,7 +82,7 @@ body {
     background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);
     background: linear-gradient(to right, #f2fcfe, #1c92d2);
     backface-visibility: hidden;
-    box-shadow: 5px	5px 3px rgb(8, 16, 115);
+    box-shadow: 5px 5px 3px rgb(8, 16, 115);
 }
 
 .cards.flip {
@@ -129,7 +130,8 @@ body {
 
 }
 
-.start-window, .final-window {
+.start-window,
+.final-window {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -140,12 +142,9 @@ body {
     justify-content: center;
     align-content: center;
     z-index: 100;
-    background: url('../images/bubble-blue-main.svg') no-repeat	center center/cover;
+    background: url('../images/bubble-blue-main.svg') no-repeat center center/cover;
     position: absolute;
-    overflow:auto;
-    /* top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+    overflow: auto;
     border-radius: 50%;
 }
 
@@ -154,23 +153,10 @@ body {
     margin: auto auto;
 }
 
-
-/* .final-window {
-    width: 270px;
-    height: 270px;
-    display: flex;
-    justify-content: center;
-    z-index: 100;
-    background: url('../images/bubble-blue-main.svg') no-repeat center center/cover;
-    position: absolute;
-    overflow: auto;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-} */
-
-#results, #results-player-name, .result-time, .rating-text {
+#results,
+#results-player-name,
+.result-time,
+.rating-text {
     display: none;
 }
 
@@ -303,25 +289,18 @@ body {
     }
   } */
 
-  /* Media query */
+/* Media query */
 
-  @media screen and (min-width: 414px) {
+@media screen and (min-width: 414px) {
     .block-game {
         width: 410px;
         height: 410px;
     }
-  }
+}
 
-  @media screen and (min-width: 540px) {
+@media screen and (min-width: 540px) {
     .block-game {
         width: 525px;
         height: 525px;
     }
-  }
-
-  /* @media screen and (min-width: 768px) {
-    .block-game {
-        width: 700px;
-        height: 700px;
-    }
-  } */
+}
