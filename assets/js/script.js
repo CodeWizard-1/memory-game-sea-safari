@@ -16,7 +16,7 @@ const results = [];
 function openStartWindow() {
     const startWindow = document.getElementById("start-window");
     startWindow.style.display = "flex";
-}
+};
 
 function closeStartWindow() {
     const startWindow = document.getElementById("start-window");
@@ -25,4 +25,35 @@ function closeStartWindow() {
         startBtn.disable = true;
         mixCards();
     }
-}
+};
+
+function playerNameCheck() {
+    if (playerName.value.trim() !=="") {
+        startBtn.removeAttribute("disabled");
+    } else {
+        startBtn.setAttribute("disabled", "disabled");
+    }
+};
+
+playerName.addEventListener("input", playerNameCheck);
+
+window.onload = openStartWindow;
+
+startBtn.addEventListener("click", () => {
+    if (playerName.value.trim() !=="") {
+        closeStartWindow();
+        mixCards();
+    }
+});
+
+function startTimer() {
+    if (!timerResults) {
+        startTime = new Data().getTime();
+        timerResults = setInterval(updateTimer, 10);
+    }
+};
+
+function stopTimer() {
+    clearInterval(timerResults);
+};
+
