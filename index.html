@@ -91,9 +91,7 @@
                 <img src="./assets/images/whale.svg" alt="" class="front-face-card">
                 <img src="./assets/images/Blue-ship-anchor.svg" alt="" class="back-face-card">
             </div>
-        </section>
-        <!-- Start and final windows -->
-        <section>
+            <!-- Start and final windows -->
             <div id="start-window" class="start-window">
                 <div class="start-window-content">
                     <h2>Enter your name</h2>
@@ -103,6 +101,32 @@
                 </div>
             </div>
             <div id="results" class="final-window">
+                    <div class="final-window-content">
+                        <h2>Game Results</h2>
+                        <table>
+                            <thead>
+                                    <tr>
+                                        <th>Rank<span id="rating-text"></span></th>
+                                        <th>Name<span id="results-player-name"></span></th>
+                                        <th>Time<span id="results-time"></span></th>
+                                    </tr>
+                            </thead>
+                            <tbody id="best-results-table"></tbody>
+                        </table>
+                    </div>
+            </div>
+        </section>
+        <!-- Start and final windows -->
+        <section>
+            <!-- <div id="start-window" class="start-window">
+                <div class="start-window-content">
+                    <h2>Enter your name</h2>
+                    <input type="text" id="play-name" placeholder="Player name">
+                    <br>
+                    <button id="start-btn">START</button>
+                </div>
+            </div> -->
+            <!-- <div id="results" class="final-window">
                 <div class="final-window-content">
                     <h2>Game Results</h2>
                     <table>
@@ -116,7 +140,7 @@
                         <tbody id="best-results-table"></tbody>
                     </table>
                 </div>
-            </div>
+            </div> -->
             <button id="restart-btn">NEW GAME</button>
         </section>
 

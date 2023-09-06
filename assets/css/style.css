@@ -47,6 +47,7 @@ body {
 }
 
 .block-game {
+    position: relative;
     max-width: 100%;
     width: 270px;
     height: 270px;
@@ -129,6 +130,10 @@ body {
 }
 
 .start-window, .final-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 270px;
     height: 270px;
     display: flex;
@@ -138,10 +143,10 @@ body {
     background: url('../images/bubble-blue-main.svg') no-repeat	center center/cover;
     position: absolute;
     overflow:auto;
-    top: 55%;
+    /* top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: -50%;
+    transform: translate(-50%, -50%); */
+    border-radius: 50%;
 }
 
 .start-window-content {
@@ -168,8 +173,6 @@ body {
 #results {
     display: none;
 }
-
-
 
 
 .final-window-content {
