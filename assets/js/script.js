@@ -4,7 +4,7 @@ const playerName = document.getElementById("player-name");
 const startBtn = document.getElementById("start-btn");
 
 
-let revealCard  = false;
+let hasRevealCard  = false;
 let boardBlocked = false;
 let firstCard, secondCard;
 let startTime;
@@ -55,5 +55,45 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(timerResults);
+};
+
+function refreshTimer() {
+    const currentTime = new Date().getTime();
+    const pastTime = currentTime - startTime;
+    const milliseconds = pastTime % 1000;
+    const seconds = Math.floor(pastTime / 1000) % 60;
+    const minutes = Math.floor(pastTime / 1000 / 60);
+    timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}.${milliseconds.toString().padStart(3, "0")}`;
+};
+
+function checkAllCardsOpen() {
+    const revealCards = document.querySelectorAll('.cards.flip');
+    if (revealCards.length === cards.length) {
+        endTime = new Date().getTime();
+        stopTimer();
+        showGameTime();
+    }
+};
+
+function revealCard() {
+    if (boardBlocked) return;
+    if (this === firstCard) return;
+
+    this.classList.add("flip");
+
+    if (!hasRevealCard) {
+        hasRevealCard = true;
+        firstCard = this;
+        startTimer();
+        return;
+    }
+    secondCard = this;
+    verifyMatch();
+};
+
+function verifyMatch() {
+    let match = firstCard.dataset.framework === secondCard.dataset.framework;
+
+    match ? disableCards() : unflipCards();
 };
 
