@@ -63,7 +63,7 @@ function refreshTimer() {
     const milliseconds = pastTime % 1000;
     const seconds = Math.floor(pastTime / 1000) % 60;
     const minutes = Math.floor(pastTime / 1000 / 60);
-    timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}.${milliseconds.toString().padStart(3, "0")}`;
+    timer.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}.${milliseconds.toString().padStart(3, "0")}`;
 };
 
 function checkAllCardsOpen() {
@@ -96,4 +96,36 @@ function verifyMatch() {
 
     match ? disableCards() : unflipCards();
 };
+
+function disableCards() {
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
+
+    resetBoard();
+};
+
+function unflipCards() {
+    boardBlocked = true;
+
+    setTimeout(() => {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+
+        resetBoard();
+    }, 1000);
+};
+
+function showGameTimer() {
+    const showPlayerName = document.getElementById("player-name").value;
+    const resultPlayerName = document.getElementById("results-player-name");
+    const resultTime = document.getElementById("resalt-time");
+
+    resultPlayerName.textContent = showPlayerName;
+
+    const currentTime = new Data().getTime();
+    const pastTime = endTime - startTime;
+    const formattedTime = formatTime(pastTime);
+
+    resultsShow();
+}
 
