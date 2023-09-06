@@ -48,8 +48,8 @@ startBtn.addEventListener("click", () => {
 
 function startTimer() {
     if (!timerResults) {
-        startTime = new Data().getTime();
-        timerResults = setInterval(updateTimer, 10);
+        startTime = new Date().getTime();
+        timerResults = setInterval(refreshTimer, 10);
     }
 };
 
@@ -115,14 +115,14 @@ function unflipCards() {
     }, 1000);
 };
 
-function showGameTimer() {
+function showGameTime() {
     const showPlayerName = document.getElementById("player-name").value;
     const resultPlayerName = document.getElementById("results-player-name");
-    const resultTime = document.getElementById("resalt-time");
+    const resultTime = document.getElementById("result-time");
 
     resultPlayerName.textContent = showPlayerName;
 
-    const currentTime = new Data().getTime();
+    const currentTime = new Date().getTime();
     const pastTime = endTime - startTime;
     const formattedTime = formatTime(pastTime);
 
