@@ -22,7 +22,7 @@ function closeStartWindow() {
     const startWindow = document.getElementById("start-window");
     if (playerName.value.trim() !=="") {
         startWindow.style.display = "none";
-        startBtn.disable = true;
+        startBtn.disabled = true;
         mixCards();
     }
 };
@@ -98,8 +98,8 @@ function verifyMatch() {
 };
 
 function disableCards() {
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
+    firstCard.removeEventListener("click", revealCard);
+    secondCard.removeEventListener("click", revealCard);
 
     resetBoard();
 };
@@ -125,6 +125,9 @@ function showGameTime() {
     const currentTime = new Date().getTime();
     const pastTime = endTime - startTime;
     const formattedTime = formatTime(pastTime);
+
+    resultTime.textContent = formattedTime;
+    updateRating(showPlayerName, pastTime);
 
     resultsShow();
 };
@@ -158,7 +161,7 @@ function resultsShow() {
         const row = document.createElement("tr");
         row.innerHTML = `
                     <td>${i + 1}</td>
-                    <td>${result.playerName}</td>
+                    <td>${result.showPlayerName}</td>
                     <td>${formatTime(result.time)}</td>
                 `;
         bestResultsTable.appendChild(row);
@@ -184,7 +187,7 @@ function resetBoard() {
 
 function mixCards() {
     cards.forEach(card => {
-        card.addEventListener("click", flipCard);
+        card.addEventListener("click", revealCard);
         const randomIndex = Math.floor(Math.random() * cards.length);
         card.style.order = randomIndex;
     })
@@ -199,6 +202,41 @@ restartBtn.addEventListener("click", () => {
     hideResultsModal();
 });
 
+function resetGame() {
+    stopTimer();
+    resetTimer();
+    closeResults();
+    resetTimer();
+    resetCards();
+    mixCards();
+    openStartWindow();
 
+    localStorage.removeItem("memoryGameResults");
 
+    resultsShow();
+};
 
+function resetTimer() {
+    clearInterval(timerResults);
+    timerResults = null;
+    timer.textContent = "0:00:00";
+};
+
+function resetCards() {
+    cards.forEach(card => {
+        card.classList.remove("flip");
+        card.addEventListener("click", revealCard);
+    })
+};
+
+function closeResults() {
+    const resultsContainer = document.getElementById("best-results-table");
+    if (resultsContainer) {
+        resultsContainer.innerHTML = "";
+    }
+};
+
+function hideResultsModal() {
+    const resultsWindow = document.getElementById("results");
+    resultsWindow.style.display = "none";
+};
