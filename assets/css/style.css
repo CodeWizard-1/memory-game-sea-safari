@@ -127,3 +127,51 @@ body {
     background-color: #7b38d8;
 
 }
+
+.start-window, .final-window {
+    width: 270px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 100;
+    background: url('../images/bubble-blue-main.svg') no-repeat	center center/cover;
+    position: absolute;
+    overflow:auto;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: -50%;
+}
+
+.start-window-content {
+    justify-content: center;
+    margin: auto auto;
+}
+
+
+/* .final-window {
+    width: 270px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    background: url('../images/bubble-blue-main.svg') no-repeat center center/cover;
+    position: absolute;
+    overflow: auto;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+} */
+
+#results {
+    display: none;
+}
+
+
+
+
+.final-window-content {
+    margin: -125px 25px 0;
+}
