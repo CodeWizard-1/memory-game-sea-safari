@@ -127,5 +127,78 @@ function showGameTime() {
     const formattedTime = formatTime(pastTime);
 
     resultsShow();
-}
+};
+
+function updateRating(showPlayerName, time) {
+    const result = {
+        showPlayerName,
+        time,
+    }
+
+    results.push(result);
+    results.sort((a, b) => a.time - b.time);
+    if (results.length > 5) {
+        results.pop();
+    }
+
+    localStorage.setItem("memoryGameResults", JSON.stringify(results));
+};
+
+function resultsShow() {
+    const resultsWindow = document.getElementById("results");
+    resultsWindow.style.display = "flex";
+
+    const bestResultsTable = document.getElementById("best-results-table");
+    bestResultsTable.innerHTML = "";
+
+    const storedResults = JSON.parse(localStorage.getItem("memoryGameResults")) || [];
+
+    for (let i = 0; i < storedResults.length; i++) {
+        const result = storedResults[i];
+        const row = document.createElement("tr");
+        row.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td>${result.playerName}</td>
+                    <td>${formatTime(result.time)}</td>
+                `;
+        bestResultsTable.appendChild(row);
+    }
+};
+
+function formatTime(milliseconds) {
+    const seconds = Math.floor(milliseconds / 1000) % 60;
+    const minutes = Math.floor(milliseconds / (1000 * 60));
+    const millisecondsPart = milliseconds % 1000;
+    const formattedSeconds = seconds.toString().padStart(2, "0");
+    const formattedMinutes = minutes.toString().padStart(2, "0");
+    const formattedMilliseconds = millisecondsPart.toString().padStart(3, "0");
+    return `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
+};
+
+function resetBoard() {
+    [hasRevealCard, boardBlocked] = [false, false];
+    [firstCard, secondCard] = [null, null];
+
+    checkAllCardsOpen();
+};
+
+function mixCards() {
+    cards.forEach(card => {
+        card.addEventListener("click", flipCard);
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        card.style.order = randomIndex;
+    })
+};
+
+mixCards();
+
+const restartBtn = document.getElementById("restart-btn");
+
+restartBtn.addEventListener("click", () => {
+    resetGame();
+    hideResultsModal();
+});
+
+
+
 
