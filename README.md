@@ -123,9 +123,9 @@ The less time the player spent completing the game, the higher his rating and th
 
 | What was done | Working correctly? |
 |---------------------|---------------------|
-| Checking the HTML code on Validator HTML was successful      | YES        |
-| Checking the CSS code on Validator CSS was successful      | YES        |
-| Checking the JavaScript code on Validator JavaScript  was successful      | YES        |
+| Checking the HTML code on Validator HTML successful      | YES        |
+| Checking the CSS code on Validator CSS successful      | YES        |
+| Checking the JavaScript code on Validator JavaScript  successful      | YES        |
 | I click on the "Start" and "New Game" buttons      | YES        |
 | If the player has not entered a name, the "Start" button is not active       | YES       |
 | I clicked on all the cards one by one to make sure they opened       | YES       |
@@ -134,3 +134,5 @@ The less time the player spent completing the game, the higher his rating and th
 |I checked whether the player's rating changes depending on the time spent by the player on the game| YES|
 
 ![Alt text](image-16.png)
+![Alt text](image-17.png)
+![Alt text](image-18.png)

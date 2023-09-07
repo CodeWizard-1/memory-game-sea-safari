@@ -16,7 +16,7 @@ const results = [];
 function openStartWindow() {
     const startWindow = document.getElementById("start-window");
     startWindow.style.display = "flex";
-};
+}
 
 function closeStartWindow() {
     const startWindow = document.getElementById("start-window");
@@ -25,7 +25,7 @@ function closeStartWindow() {
         startBtn.disabled = true;
         mixCards();
     }
-};
+}
 
 function playerNameCheck() {
     if (playerName.value.trim() !=="") {
@@ -33,7 +33,7 @@ function playerNameCheck() {
     } else {
         startBtn.setAttribute("disabled", "disabled");
     }
-};
+}
 
 
 playerName.addEventListener("input", playerNameCheck);
@@ -60,11 +60,11 @@ function startTimer() {
         startTime = new Date().getTime();
         timerResults = setInterval(refreshTimer, 10);
     }
-};
+}
 
 function stopTimer() {
     clearInterval(timerResults);
-};
+}
 
 function refreshTimer() {
     const currentTime = new Date().getTime();
@@ -73,7 +73,7 @@ function refreshTimer() {
     const seconds = Math.floor(pastTime / 1000) % 60;
     const minutes = Math.floor(pastTime / 1000 / 60);
     timer.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}.${milliseconds.toString().padStart(3, "0")}`;
-};
+}
 
 function checkAllCardsOpen() {
     const revealCards = document.querySelectorAll('.cards.flip');
@@ -82,7 +82,7 @@ function checkAllCardsOpen() {
         stopTimer();
         showGameTime();
     }
-};
+}
 
 function revealCard() {
     if (boardBlocked) return;
@@ -98,20 +98,25 @@ function revealCard() {
     }
     secondCard = this;
     verifyMatch();
-};
+}
 
 function verifyMatch() {
     let match = firstCard.dataset.framework === secondCard.dataset.framework;
 
-    match ? disableCards() : unflipCards();
-};
+    // match ? disableCards() : unflipCards();
+    if (match) {
+        disableCards();
+    } else {
+        unflipCards();
+    }
+}
 
 function disableCards() {
     firstCard.removeEventListener("click", revealCard);
     secondCard.removeEventListener("click", revealCard);
 
     resetBoard();
-};
+}
 
 function unflipCards() {
     boardBlocked = true;
@@ -122,7 +127,7 @@ function unflipCards() {
 
         resetBoard();
     }, 1000);
-};
+}
 
 function showGameTime() {
     const showPlayerName = document.getElementById("player-name").value;
@@ -131,7 +136,7 @@ function showGameTime() {
 
     resultPlayerName.textContent = showPlayerName;
 
-    const currentTime = new Date().getTime();
+    // const currentTime = new Date().getTime();
     const pastTime = endTime - startTime;
     const formattedTime = formatTime(pastTime);
 
@@ -139,14 +144,14 @@ function showGameTime() {
     updateRating(showPlayerName, pastTime);
 
     resultsShow();
-};
+}
 
 
 function updateRating(showPlayerName, time) {
     const result = {
         showPlayerName,
         time,
-    }
+    };
 
     results.push(result);
     results.sort((a, b) => a.time - b.time);
@@ -155,7 +160,7 @@ function updateRating(showPlayerName, time) {
     }
 
     localStorage.setItem("memoryGameResults", JSON.stringify(results));
-};
+}
 
 function resultsShow() {
     const resultsWindow = document.getElementById("results");
@@ -176,7 +181,7 @@ function resultsShow() {
                 `;
         bestResultsTable.appendChild(row);
     }
-};
+}
 
 function formatTime(milliseconds) {
     const seconds = Math.floor(milliseconds / 1000) % 60;
@@ -186,22 +191,22 @@ function formatTime(milliseconds) {
     const formattedMinutes = minutes.toString().padStart(2, "0");
     const formattedMilliseconds = millisecondsPart.toString().padStart(3, "0");
     return `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
-};
+}
 
 function resetBoard() {
     [hasRevealCard, boardBlocked] = [false, false];
     [firstCard, secondCard] = [null, null];
 
     checkAllCardsOpen();
-};
+}
 
 function mixCards() {
     cards.forEach(card => {
         card.addEventListener("click", revealCard);
         const randomIndex = Math.floor(Math.random() * cards.length);
         card.style.order = randomIndex;
-    })
-};
+    });
+}
 
 mixCards();
 
@@ -223,30 +228,30 @@ function resetGame() {
     localStorage.removeItem("memoryGameResults");
 
     resultsShow();
-};
+}
 
 function resetTimer() {
     clearInterval(timerResults);
     timerResults = null;
     timer.textContent = "0:00:00";
-};
+}
 
 function resetCards() {
     cards.forEach(card => {
         card.classList.remove("flip");
         card.addEventListener("click", revealCard);
-    })
-};
+    });
+}
 
 function closeResults() {
     const resultsContainer = document.getElementById("best-results-table");
     if (resultsContainer) {
         resultsContainer.innerHTML = "";
     }
-};
+}
 
 function hideResultsModal() {
     const resultsWindow = document.getElementById("results");
     resultsWindow.style.display = "none";
-};
+}
 
