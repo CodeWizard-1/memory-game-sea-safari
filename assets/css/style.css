@@ -43,6 +43,8 @@ header h1 {
     color: rgb(225, 0, 101);
 }
 
+/* Block with style game cards */
+
 .block-game {
     position: relative;
     max-width: 100%;
@@ -89,6 +91,9 @@ header h1 {
     transform: rotateY(180deg);
 }
 
+
+/*Block with style for button*/
+
 #restart-btn {
     display: flex;
     background-color: #7b38d8;
@@ -125,6 +130,8 @@ header h1 {
     background-color: #7b38d8;
 
 }
+
+/*Block with start and results windows*/
 
 .start-window,
 .final-window {

@@ -3,7 +3,6 @@ const timer = document.getElementById("timer");
 const playerName = document.getElementById("player-name");
 const startBtn = document.getElementById("start-btn");
 
-
 let hasRevealCard  = false;
 let boardBlocked = false;
 let firstCard, secondCard;
@@ -11,7 +10,11 @@ let startTime;
 let endTime;
 let timerResults;
 
+// Array for storing game results
+
 const results = [];
+
+//Block with  open and close window
 
 function openStartWindow() {
     const startWindow = document.getElementById("start-window");
@@ -26,6 +29,9 @@ function closeStartWindow() {
         mixCards();
     }
 }
+
+
+//Block with player name check
 
 function playerNameCheck() {
     if (playerName.value.trim() !=="") {
@@ -53,7 +59,7 @@ startBtn.addEventListener("click", () => {
     }
 });
 
-
+//Timer control block
 
 function startTimer() {
     if (!timerResults) {
@@ -74,6 +80,9 @@ function refreshTimer() {
     const minutes = Math.floor(pastTime / 1000 / 60);
     timer.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}.${milliseconds.toString().padStart(3, "0")}`;
 }
+
+
+//Block to check if all cards are open
 
 function checkAllCardsOpen() {
     const revealCards = document.querySelectorAll('.cards.flip');
@@ -145,6 +154,8 @@ function showGameTime() {
 }
 
 
+// Block for updating the table of best results
+
 function updateRating(showPlayerName, time) {
     const result = {
         showPlayerName,
@@ -215,6 +226,9 @@ restartBtn.addEventListener("click", () => {
     hideResultsModal();
 });
 
+
+// Game reset block
+
 function resetGame() {
     stopTimer();
     resetTimer();
@@ -228,11 +242,16 @@ function resetGame() {
     resultsShow();
 }
 
+// Function for resetting the timer
+
 function resetTimer() {
     clearInterval(timerResults);
     timerResults = null;
     timer.textContent = "0:00:00";
 }
+
+
+// Function for resetting card status
 
 function resetCards() {
     cards.forEach(card => {
@@ -241,12 +260,17 @@ function resetCards() {
     });
 }
 
+
+// Function for closing the window with game results
 function closeResults() {
     const resultsContainer = document.getElementById("best-results-table");
     if (resultsContainer) {
         resultsContainer.innerHTML = "";
     }
 }
+
+
+// Function for hiding the results window
 
 function hideResultsModal() {
     const resultsWindow = document.getElementById("results");
