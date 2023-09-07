@@ -135,24 +135,92 @@ The less time the player spent completing the game, the higher his rating and th
 | Checked whether the player's name, time and rating are displayed in the results table       |<span style="background-color: green; padding: 3px;">YES</span>|
 |I checked whether the player's rating changes depending on the time spent by the player on the game|<span style="background-color: green; padding: 3px;">YES</span>|
 
-**Validator HTML**:
+*Validator HTML*
 
 ![Alt text](./documentation/image-16.png)
 
-**Validator CSS**:
+*Validator CSS*
 
 ![Alt text](./documentation/image-17.png)
 
-**Validator JavaScript**:
+*Validator JavaScript*
 
 ![Alt text](./documentation/image-18.png)
 
-**Lighthouse for mobile device**:
+*Lighthouse for mobile device*
 
 ![Alt text](./documentation/Screenshot-test-mobail-version.png)
 
-**Lighthouse for desktop device**:
+*Lighthouse for desktop device*
 
 
 ![Alt text](./documentation/Screenshot-desktop-version.png)
 
+
+
+
+**Fixed bugs**
+
+
+## Frameworks and Programs Used
+
+- [Validator HTML](https://validator.w3.org/), [Validator JavaScript](https://jshint.com/)  and 
+ [Validator CSS](igsaw.w3.org) - to check errors in code.
+- Google Fonts - to add and import the fonts used in the website.
+- Git - for version control
+- GitHub - sharing and storing the files of the website
+- [Codeanywhere](https://codeanywhere.com/)  and [Gitpot](https://gitpod.io/) - to code my project
+- Lighthouse - to test the accessibility of the website
+- [Am I responsive?](https://ui.dev/amiresponsive) To present the website image on a different devices.
+- Google Dev Tools - to test features, and responsiveness and to troubleshoot.
+- [Convertio](https://convertio.co/) and [Cloudconvert](https://cloudconvert.com/) - to convert images type from JPG to WEBP.
+
+## Credits
+
+### Code
+
+- The code was created inspired by the projects of "Love running" and the "Love maths" and  [this](https://www.youtube.com/live/NGwZWdn1uh0?feature=shared) video.
+- The idea of a button changing color upon clicking was taken from [here](https://dsgnmania.com/)
+- Some gradient colors were taken from [here](https://uigradients.com/)
+
+### Media:
+
+All images used are from:
+
+- [Freesvg](https://freesvg.org/)
+- [Vecteezy](https://www.vecteezy.com/)
+
+## Deployment and local development
+
+### Deployment
+
+Github Pages was used to deploy the live website. The instructions to achieve this are below:
+
+- Log in (or sign up) to Github.
+- Find the repository for this project, https://github.com/CodeWizard-1/memory-game-sea-safari
+- Click on the Settings link.
+- Click on the Pages link in the left hand side navigation bar.
+- In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
+- Click Save. Your live Github Pages site is now deployed at the URL shown.
+
+### Local Development
+
+How to Clone:
+
+- Log in (or sign up) to GitHub.
+- Go to the repository for this project, https://github.com/CodeWizard-1/memory-game-sea-safari.
+- Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+- Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+- Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+How to Fork:
+
+- Log in (or sign up) to Github.
+- Go to the repository for this project, https://github.com/CodeWizard-1/memory-game-sea-safari.
+- Click the Fork button in the top right corner.
+
+## Features Left to Implement
+
+If I had more time I could add:
+- levels in the game with different images;
+- save the player’s name so that you don’t have to enter it every time you start the game
