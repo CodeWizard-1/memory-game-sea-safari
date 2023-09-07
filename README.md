@@ -121,16 +121,16 @@ The less time the player spent completing the game, the higher his rating and th
 
 ## Testing
 
+| What was done | Working correctly? |
+|---------------------|---------------------|
+| Checking the HTML code on Validator HTML was successful      | YES        |
+| Checking the CSS code on Validator CSS was successful      | YES        |
+| Checking the JavaScript code on Validator JavaScript  was successful      | YES        |
+| I click on the "Start" and "New Game" buttons      | YES        |
+| If the player has not entered a name, the "Start" button is not active       | YES       |
+| I clicked on all the cards one by one to make sure they opened       | YES       |
+| I also checked that the "Start" and "New Game" buttons change color and are visually different after being pressed|  YES       |
+| Checked whether the player's name, time and rating are displayed in the results table       | YES       |
+|I checked whether the player's rating changes depending on the time spent by the player on the game| YES|
 
-
-| Left-Aligned                      | Working correctly?|
-|:----------------------------------|:---------------:|
-|I click on the "Start" and "New Game" buttons| YES| 
-|If the player has not entered a name, the "Start" button is not active | YES|
-|I clicked on all the cards one by one to make sure they opened | YES|
-
-|I also checked that the "Start" and "New Game" buttons change color and are visually different after being pressed. | YES|
-
-|Checked whether the player's name, time and rating are displayed in the results table | YES|
-
-I checked whether the player's rating changes depending on the time spent by the player on the game| YES|
+![Alt text](image-16.png)
