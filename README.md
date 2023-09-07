@@ -104,6 +104,12 @@ The less time the player spent completing the game, the higher his rating and th
 
 ![Alt text](./documentation/image-15.png)
 
+**Features Left to Implement**
+
+If I had more time I could add:
+- levels in the game with different images;
+- save the player’s name so that you don’t have to enter it every time you start the game
+
 
 ### Languages Used
 
@@ -160,17 +166,13 @@ The less time the player spent completing the game, the higher his rating and th
 
 
 **Fixed bugs**
-- Bug 1:
+- Bug:
+
 Issue: when adding a large number of characters to the player’s name in the results table, the text goes out of view (see screenshot below)<br>
 
 ![Alt text](image.png)
+
 Fix: limited the maximum number of characters to 10 using the maxlength attribute on the input element
-
-
-
-
-
-
 
 
 ## Frameworks and Programs Used
@@ -230,8 +232,4 @@ How to Fork:
 - Go to the repository for this project, https://github.com/CodeWizard-1/memory-game-sea-safari.
 - Click the Fork button in the top right corner.
 
-## Features Left to Implement
 
-If I had more time I could add:
-- levels in the game with different images;
-- save the player’s name so that you don’t have to enter it every time you start the game
