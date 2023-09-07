@@ -35,15 +35,15 @@ For mobail devices:
 
 Start page
 
-![Alt text](image-3.png)
+![Alt text](./documentation/Mobile-start-page.png)
 
 Game page
 
-![Alt text](image-4.png)
+![Alt text](./documentation/Mobile-game-page.png)
 
 Results page
 
-![Alt text](image-5.png)
+![Alt text](./documentation/Mobile-results-page.png)
 
 ## Features
 
