@@ -160,6 +160,17 @@ The less time the player spent completing the game, the higher his rating and th
 
 
 **Fixed bugs**
+- Bug 1:
+Issue: when adding a large number of characters to the player’s name in the results table, the text goes out of view (see screenshot below)<br>
+
+![Alt text](image.png)
+Fix: limited the maximum number of characters to 10 using the maxlength attribute on the input element
+
+
+
+
+
+
 
 
 ## Frameworks and Programs Used
