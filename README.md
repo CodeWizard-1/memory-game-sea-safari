@@ -133,6 +133,23 @@ The less time the player spent completing the game, the higher his rating and th
 | Checked whether the player's name, time and rating are displayed in the results table       | YES       |
 |I checked whether the player's rating changes depending on the time spent by the player on the game| YES|
 
+**Validator HTML**:
+
 ![Alt text](image-16.png)
+
+**Validator CSS**:
+
 ![Alt text](image-17.png)
+
+**Validator JavaScript**:
+
 ![Alt text](image-18.png)
+
+**Lighthouse for mobile device**:
+
+![Alt text](./documentation/Screenshot-test-mobail-version.png)
+
+**Lighthouse for desktop device**:
+
+
+![Alt text](./documentation/Screenshot-desktop-version.png)
