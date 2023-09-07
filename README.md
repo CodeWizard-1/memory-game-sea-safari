@@ -1,6 +1,6 @@
 # Memory Game "Sea Safari"
 
-![Memory Game "Sea Safari"t](documentation/screenshot-ui-dev.png)
+![Memory Game "Sea Safari"t](./documentation/Screenshot-desktop-version.png)
 
 [You can view the website here](https://codewizard-1.github.io/memory-game-sea-safari/)
 
@@ -23,13 +23,13 @@ When planning the project, I used Balsamiq to create wireframes.
 For desktop devices:
 
 Start page
-![Alt text](image.png)
+![Alt text](./documentation/Desktop-start-page.png)
 
 Game page
-![Alt text](image-1.png)
+![Alt text](./documentation/Desktop-game-page.png)
 
 Results page
-![Alt text](image-2.png)
+![Alt text](./documentation/Desktop-results-page.png)
 
 For mobail devices:
 
@@ -53,7 +53,7 @@ The website has a responsive layout that automatically adjusts as the screen siz
 
 **Text**: Fonts are chosen to make the text clear and beautiful.
 
-![Alt text](image-6.png)
+![Alt text](./documentation/image-6.png)
 
 
 **Images**: I use high-quality images of sea animals for cards and the landscape of the seabedю
@@ -61,19 +61,19 @@ The website has a responsive layout that automatically adjusts as the screen siz
 
 **Buttons**:  The game has two buttons: "START" and "NEW GAME". They differ in color so that the player can easily navigate the game.
 \
-![Alt text](image-7.png)
-![Alt text](image-8.png)
+![Alt text](./documentation/image-7.png)
+![Alt text](./documentation/image-8.png)
 
 When you hover your cursor over these buttons, they change color, which makes the game more exciting.
 
-![Alt text](image-9.png)
-![Alt text](image-10.png)
+![Alt text](./documentation/image-9.png)
+![Alt text](./documentation/image-10.png)
 
 **Mobile-Friendly**: The design looks great on different devices, from computers to phones.
 
-![Alt text](image-11.png)
+![Alt text](./documentation/image-11.png)
 
-![Alt text](image-12.png)
+![Alt text](./documentation/image-12.png)
 
 
 **Convenience**: The design is made so that users can easily concentrate on the game.
@@ -83,7 +83,7 @@ When you hover your cursor over these buttons, they change color, which makes th
 On the start page the player must enter his name. This is mandatory since the player’s name will be saved so that at the end of the game the player’s name, the time for which he opened all the cards, as well as his rating will be displayed in the results table.
 If the player does not enter a name, the "Start" button will not be active.
 
-![Alt text](image-13.png)
+![Alt text](./documentation/image-13.png)
 
 
 **Game page**: 
@@ -94,7 +94,7 @@ When a player opens cards, the game compares them with each other and if the car
 As soon as the player turns over the first card, a timer starts indicating the time.
 As soon as the player finds all pairs of cards, the timer will stop. This time is needed for the results table.
 
-![Alt text](image-14.png)
+![Alt text](./documentation/image-14.png)
 
 
 **Results page**: 
@@ -102,7 +102,7 @@ This page shows the top 5 player scores. The table shows the player's rating, hi
 
 The less time the player spent completing the game, the higher his rating and the player moves to a higher place in the results table.
 
-![Alt text](image-15.png)
+![Alt text](./documentation/image-15.png)
 
 
 ### Languages Used
@@ -135,15 +135,15 @@ The less time the player spent completing the game, the higher his rating and th
 
 **Validator HTML**:
 
-![Alt text](image-16.png)
+![Alt text](./documentation/image-16.png)
 
 **Validator CSS**:
 
-![Alt text](image-17.png)
+![Alt text](./documentation/image-17.png)
 
 **Validator JavaScript**:
 
-![Alt text](image-18.png)
+![Alt text](./documentation/image-18.png)
 
 **Lighthouse for mobile device**:
 
@@ -153,3 +153,4 @@ The less time the player spent completing the game, the higher his rating and th
 
 
 ![Alt text](./documentation/Screenshot-desktop-version.png)
+
