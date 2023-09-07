@@ -35,16 +35,11 @@ function playerNameCheck() {
     }
 };
 
+
 playerName.addEventListener("input", playerNameCheck);
 
 window.onload = openStartWindow;
 
-// startBtn.addEventListener("click", () => {
-//     if (playerName.value.trim() !=="") {
-//         closeStartWindow();
-//         mixCards();
-//     }
-// });
 
 startBtn.addEventListener("click", () => {
     const playerName = document.getElementById("player-name");
@@ -54,9 +49,11 @@ startBtn.addEventListener("click", () => {
         mixCards();
     } else {
         const nameError = document.getElementById("name-error");
-        nameError.style.display = "block"; // Показываем сообщение об ошибке
+        nameError.style.display = "block";
     }
 });
+
+
 
 function startTimer() {
     if (!timerResults) {
@@ -219,10 +216,9 @@ function resetGame() {
     stopTimer();
     resetTimer();
     closeResults();
-    // resetTimer();
     resetCards();
-    // mixCards();
     openStartWindow();
+    playerName.value = "";
 
     localStorage.removeItem("memoryGameResults");
 
@@ -254,4 +250,3 @@ function hideResultsModal() {
     resultsWindow.style.display = "none";
 };
 
-//test
