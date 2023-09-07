@@ -34,10 +34,69 @@ Results page
 For mobail devices:
 
 Start page
+
 ![Alt text](image-3.png)
 
 Game page
+
 ![Alt text](image-4.png)
 
 Results page
+
 ![Alt text](image-5.png)
+
+## Features
+
+The site consists of three pages: the start page, the game page and the game results page.
+The website has a responsive layout that automatically adjusts as the screen size changes.
+
+
+**Text**: Fonts are chosen to make the text clear and beautiful.
+
+![Alt text](image-6.png)
+
+
+**Images**: I use high-quality images of sea animals for cards and the landscape of the seabedю
+
+
+**Buttons**:  The game has two buttons: "START" and "NEW GAME". They differ in color so that the player can easily navigate the game.
+\
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+
+When you hover your cursor over these buttons, they change color, which makes the game more exciting.
+
+![Alt text](image-9.png)
+![Alt text](image-10.png)
+
+**Mobile-Friendly**: The design looks great on different devices, from computers to phones.
+
+![Alt text](image-11.png)
+
+![Alt text](image-12.png)
+
+
+**Convenience**: The design is made so that users can easily concentrate on the game.
+
+
+**Start page**: 
+On the start page the player must enter his name. This is mandatory since the player’s name will be saved so that at the end of the game the player’s name, the time for which he opened all the cards, as well as his rating will be displayed in the results table.
+If the player does not enter a name, the "Start" button will not be active.
+
+![Alt text](image-13.png)
+
+
+**Game page**: 
+After entering the player's name and pressing the "Start" button, the start window disappears and a field with 16 cards remains.
+As soon as the player turns over the first card, a timer starts indicating the time.
+As soon as the player finds all pairs of cards, the timer will stop. This time is needed for the results table.
+
+![Alt text](image-14.png)
+
+
+**Results page**: 
+This page shows the top 5 player scores. The table shows the player's rating, his name and the time in which he finished the game.
+
+The less time the player spent completing the game, the higher his rating and the player moves to a higher place in the results table.
+
+![Alt text](image-15.png)
