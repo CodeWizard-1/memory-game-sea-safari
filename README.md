@@ -88,6 +88,9 @@ If the player does not enter a name, the "Start" button will not be active.
 
 **Game page**: 
 After entering the player's name and pressing the "Start" button, the start window disappears and a field with 16 cards remains.
+
+When a player opens cards, the game compares them with each other and if the cards are the same, then they remain open, if the cards are different, then they are turned over with their backs facing the player.
+
 As soon as the player turns over the first card, a timer starts indicating the time.
 As soon as the player finds all pairs of cards, the timer will stop. This time is needed for the results table.
 
@@ -100,3 +103,34 @@ This page shows the top 5 player scores. The table shows the player's rating, hi
 The less time the player spent completing the game, the higher his rating and the player moves to a higher place in the results table.
 
 ![Alt text](image-15.png)
+
+
+### Languages Used
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Availability
+
+- In the process of writing code, I focused on making the game as convenient and colorful as possible.
+
+- I added descriptive Alt attributes to images and links. This allows screen readers to explain the purpose and context of content to users with visual impairments.
+
+- I have integrated a hover effect on all buttons so that users can easily identify when they are interacting with a button, thereby improving the overall user experience.
+
+## Testing
+
+
+
+| Left-Aligned                      | Working correctly?|
+|:----------------------------------|:---------------:|
+|I click on the "Start" and "New Game" buttons| YES| 
+|If the player has not entered a name, the "Start" button is not active | YES|
+|I clicked on all the cards one by one to make sure they opened | YES|
+
+|I also checked that the "Start" and "New Game" buttons change color and are visually different after being pressed. | YES|
+
+|Checked whether the player's name, time and rating are displayed in the results table | YES|
+
+I checked whether the player's rating changes depending on the time spent by the player on the game| YES|
