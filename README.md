@@ -16,4 +16,28 @@ While planning this project, the idea arose to create a game in a nautical style
 Various elements and resources were used in the game design to create the appropriate atmosphere and visual perception: images of marine life (dolphins, whales, fish, crabs), elements of marine nature,
 attributes of navigation (anchors), color palette (blue and blue shades, as these are the colors of water).
 
+## Wireframes
 
+When planning the project, I used Balsamiq to create wireframes.
+
+For desktop devices:
+
+Start page
+![Alt text](image.png)
+
+Game page
+![Alt text](image-1.png)
+
+Results page
+![Alt text](image-2.png)
+
+For mobail devices:
+
+Start page
+![Alt text](image-3.png)
+
+Game page
+![Alt text](image-4.png)
+
+Results page
+![Alt text](image-5.png)
