@@ -147,11 +147,13 @@ function showGameTime() {
     const pastTime = endTime - startTime;
     const formattedTime = formatTime(pastTime);
 
+
     resultTime.textContent = formattedTime;
     updateRating(showPlayerName, pastTime);
 
     resultsShow();
 }
+
 
 
 // Block for updating the table of best results
