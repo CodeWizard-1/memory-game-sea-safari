@@ -1,6 +1,6 @@
 # Memory Game "Sea Safari"
 
-![Memory Game "Sea Safari"t](./documentation/Screenshot-desktop-version.png)
+![Memory Game "Sea Safari"t](./documentation/screenshot-ui-dev.png)
 
 [You can view the website here](https://codewizard-1.github.io/memory-game-sea-safari/)
 
@@ -122,16 +122,18 @@ The less time the player spent completing the game, the higher his rating and th
 ## Testing
 
 | What was done | Working correctly? |
-|---------------------|---------------------|
-| Checking the HTML code on Validator HTML successful      | YES        |
-| Checking the CSS code on Validator CSS successful      | YES        |
-| Checking the JavaScript code on Validator JavaScript  successful      | YES        |
-| I click on the "Start" and "New Game" buttons      | YES        |
-| If the player has not entered a name, the "Start" button is not active       | YES       |
-| I clicked on all the cards one by one to make sure they opened       | YES       |
-| I also checked that the "Start" and "New Game" buttons change color and are visually different after being pressed|  YES       |
-| Checked whether the player's name, time and rating are displayed in the results table       | YES       |
-|I checked whether the player's rating changes depending on the time spent by the player on the game| YES|
+|---------------------|:---------------------:|
+| Checking the HTML code on Validator HTML successful      | <span style="background-color: green; padding: 3px;">YES</span>        |
+| Checking the CSS code on Validator CSS successful      |<span style="background-color: green; padding: 3px;">YES</span>|
+| Checking the JavaScript code on Validator JavaScript  successful      |<span style="background-color: green; padding: 3px;">YES</span>|
+| Checking Lighthouse for mobile device  successful      | <span style="background-color: green; padding: 3px;">YES</span>|
+| Checking Lighthouse for desktop device successful      | <span style="background-color: green; padding: 3px;">YES</span>|
+| I click on the "Start" and "New Game" buttons      | <span style="background-color: green; padding: 3px;">YES</span>|
+| If the player has not entered a name, the "Start" button is not active       |<span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on all the cards one by one to make sure they opened       |<span style="background-color: green; padding: 3px;">YES</span>|
+| I also checked that the "Start" and "New Game" buttons change color and are visually different after being pressed|<span style="background-color: green; padding: 3px;">YES</span>|
+| Checked whether the player's name, time and rating are displayed in the results table       |<span style="background-color: green; padding: 3px;">YES</span>|
+|I checked whether the player's rating changes depending on the time spent by the player on the game|<span style="background-color: green; padding: 3px;">YES</span>|
 
 **Validator HTML**:
 

@@ -103,7 +103,6 @@ function revealCard() {
 function verifyMatch() {
     let match = firstCard.dataset.framework === secondCard.dataset.framework;
 
-    // match ? disableCards() : unflipCards();
     if (match) {
         disableCards();
     } else {
@@ -136,7 +135,6 @@ function showGameTime() {
 
     resultPlayerName.textContent = showPlayerName;
 
-    // const currentTime = new Date().getTime();
     const pastTime = endTime - startTime;
     const formattedTime = formatTime(pastTime);
 

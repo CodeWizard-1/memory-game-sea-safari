@@ -18,9 +18,6 @@ body {
     background: url('../images/background-dark-scuba-divers.webp') no-repeat center center/cover;
 }
 
-.hidden-heading {
-    display: none;
-}
 
 header {
     margin: 10px auto;
