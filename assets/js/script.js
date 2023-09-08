@@ -224,6 +224,8 @@ const restartBtn = document.getElementById("restart-btn");
 restartBtn.addEventListener("click", () => {
     resetGame();
     hideResultsModal();
+    playerName.focus();
+    playerName.setSelectionRange(playerName.value.length / 2, playerName.value.length / 2);
 });
 
 
