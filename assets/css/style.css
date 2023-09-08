@@ -105,7 +105,7 @@ header h1 {
     width: 200px;
     transition: all .5s;
     cursor: pointer;
-    margin: 0 auto;
+    margin: auto auto;
     box-shadow: 5px 5px 3px rgb(8, 16, 115);
 }
 
@@ -193,7 +193,7 @@ input::placeholder {
 
 @media screen and (min-width: 540px) {
     .block-game {
-        width: 525px;
-        height: 525px;
+        width: 490px;
+        height: 490px;
     }
 }

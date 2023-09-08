@@ -1,6 +1,6 @@
 # Memory Game "Sea Safari"
 
-![Memory Game "Sea Safari"t](./documentation/screenshot-ui-dev.png)
+![Memory Game "Sea Safari"](./documentation/screenshot-ui-dev.png)
 
 [You can view the website here](https://codewizard-1.github.io/memory-game-sea-safari/)
 

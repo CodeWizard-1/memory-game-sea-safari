@@ -80,6 +80,7 @@ function refreshTimer() {
     const minutes = Math.floor(pastTime / 1000 / 60);
     timer.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}.${milliseconds.toString().padStart(3, "0")}`;
 }
+    
 
 
 //Block to check if all cards are open
@@ -144,16 +145,13 @@ function showGameTime() {
 
     resultPlayerName.textContent = showPlayerName;
 
+    resultTime.textContent = timer.textContent;
+
     const pastTime = endTime - startTime;
-    const formattedTime = formatTime(pastTime);
-
-
-    resultTime.textContent = formattedTime;
     updateRating(showPlayerName, pastTime);
 
     resultsShow();
 }
-
 
 
 // Block for updating the table of best results
