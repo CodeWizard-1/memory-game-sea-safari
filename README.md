@@ -192,7 +192,7 @@ Fix: limited the maximum number of characters to 10 using the maxlength attribut
 
 ### Code
 
-- The code was created inspired by the projects of "Love running" and the "Love maths" and  [this](https://www.youtube.com/live/NGwZWdn1uh0?feature=shared) video.
+- The code was created inspired by the projects of "Love running" and the "Love maths",  [this video](https://www.youtube.com/live/NGwZWdn1uh0?feature=shared) and [this video](https://youtu.be/dqqxkrKhfS4?feature=shared), [this article](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and [this article](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/maxlength).
 - The idea of a button changing color upon clicking was taken from [here](https://dsgnmania.com/)
 - Some gradient colors were taken from [here](https://uigradients.com/)
 
